@@ -1,9 +1,191 @@
-<!DOCTYPE html>
-<html>
+[21/05/2026 03:41 ص] MOHAMMED Habeeb: <!DOCTYPE html>
+<html lang="ar" dir="rtl">
 <head>
-    <title>موقعي الأول</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجري الخرافي الأول</title>
+    <style>
+        /* تصميم الواجهة والألوان الخلفية المظلمة */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* شريط العنوان العلوي */
+        header {
+            background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header p {
+            margin: 5px 0 0 0;
+            opacity: 0.9;
+            font-size: 1.1rem;
+        }
+
+        /* حاوية المنتجات الرئيسية */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        /* كارت المنتج الخرافي */
+        .product-card {
+            background-color: #1e293b;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            border: 1px solid #334155;
+        }
+
+        /* تأثير حركي عند تمرير الماوس فوق المنتج */
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 30px rgba(59, 130, 246, 0.2);
+            border-color: #3b82f6;
+        }
+
+        /* صور المنتجات الديجيتال الخرافية */
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        /* تفاصيل المنتج */
+        .product-info {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .product-title {
+            margin: 0 0 10px 0;
+            font-size: 1.4rem;
+            color: #fff;
+        }
+
+        .product-desc {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin: 0 0 20px 0;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #10b981;
+        }
+
+        /* زر الشراء والتفاعل */
+        .buy-btn {
+            background: linear-gradient(135deg, #3b82f6, #2563eb);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1rem;
+            transition: background 0.2s ease;
+        }
+
+        .buy-btn:hover {
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+        }
+    </style>
 </head>
 <body>
-    <h1>أهلاً بك في موقعي المجاني الأول على جيتهاب!</h1>
+
+    <!-- الجزء العلوي للمتجر -->
+    <header>
+        <h1>💎 متجر الألعاب والتقنية الخرافي 💎</h1>
+        <p>مرحباً بك في أول تجربة متجر إلكتروني متكامل من برمجتي!</p>
+    </header>
+
+    <!-- المنتجات المعروضة -->
+    <div class="container">
+        
+        <!-- المنتج الأول -->
+        <div class="product-card">
+            <img src="https://unsplash.com" alt="سماعة محيطية" class="product-image">
+            <div class="product-info">
+                <div>
+                    <h3 class="product-title">سماعة جيمنج محيطية</h3>
+[21/05/2026 03:41 ص] MOHAMMED Habeeb: <p class="product-desc">سماعة احترافية عازلة للصوت بالكامل مع إضاءة RGB وتأثيرات صوتية ثلاثية الأبعاد للألعاب القوية.</p>
+                </div>
+                <div class="product-footer">
+                    <span class="product-price">$89</span>
+                    <button class="buy-btn" onclick="showAlert('سماعة جيمنج محيطية')">إضافة للسلة</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- المنتج الثاني -->
+        <div class="product-card">
+            <img src="https://unsplash.com" alt="يد تحكم" class="product-image">
+            <div class="product-info">
+                <div>
+                    <h3 class="product-title">يد تحكم احترافية للبي سي</h3>
+                    <p class="product-desc">يد تحكم لاسلكية سريعة الاستجابة بتصميم مريح جداً لليد للاستخدام في جلسات اللعب الطويلة والمتواصلة.</p>
+                </div>
+                <div class="product-footer">
+                    <span class="product-price">$55</span>
+                    <button class="buy-btn" onclick="showAlert('يد تحكم احترافية للبي سي')">إضافة للسلة</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- المنتج الثالث -->
+        <div class="product-card">
+            <img src="https://unsplash.com" alt="كيبورد ميكانيكي" class="product-image">
+            <div class="product-info">
+                <div>
+                    <h3 class="product-title">كيبورد ميكانيكي RGB</h3>
+                    <p class="product-desc">لوحة مفاتيح ميكانيكية سريعة جداً ومخصصة للألعاب مع ألوان خلفية خلابة وقابلة للتعديل بالكامل.</p>
+                </div>
+                <div class="product-footer">
+                    <span class="product-price">$120</span>
+                    <button class="buy-btn" onclick="showAlert('كيبورد ميكانيكي RGB')">إضافة للسلة</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- كود تفاعلي يعرض رسالة عند الضغط على الزر -->
+    <script>
+        function showAlert(productName) {
+            alert("🔥 مرحباً بك! تم إضافة (" + productName + ") إلى السلة بنجاح. المتجر حالياً في وضع العرض والتجربة البرمجية ولا توجد عمليات دفع حقيقية!");
+        }
+    </script>
+
 </body>
 </html>
